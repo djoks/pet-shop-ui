@@ -7,7 +7,7 @@ const props = defineProps<MenuItemProps>();
 const hovered = ref(false);
 
 const hasSubItems = computed(() => {
-  return props.subItems?.length > 0;
+  return (props.subItems?.length ?? 0) > 0;
 });
 
 
