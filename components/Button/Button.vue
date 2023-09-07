@@ -11,7 +11,7 @@ const onClick = () => {
 </script>
 
 <template>
-  <button class="rounded-md py-2" :class="[{ 'w-full': props.size == 'full' }, {
+  <button class="rounded-md py-2 text-sm" :class="[{ 'w-full': props.size == 'full' }, {
     'bg-primary hover:bg-primary-600 text-white': props.variant == 'primary' &&
       props.type == 'raised',
     'border border-white text-white hover:bg-white hover:bg-opacity-10': props.variant == 'white' &&

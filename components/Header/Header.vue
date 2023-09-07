@@ -10,7 +10,7 @@ const { menuItems } = useMenu("top");
     <div class="container mx-auto flex items-center justify-between w-full h-full">
       <Logo variant="white" alignment="horizontal" size="sm" />
 
-      <Menu :items="menuItems" variant="light" :uppercase="true" font-size="lg"
+      <Menu :items="menuItems" variant="light" :uppercase="true" font-size="md"
         hover-class="hover:bg-white hover:bg-opacity-5" />
 
       <div class="flex space-x-5">
