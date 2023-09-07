@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { ButtonProps } from "./Button.types"
 
 const { menuItems } = useMenu("top");
 
