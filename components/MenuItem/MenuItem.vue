@@ -14,7 +14,7 @@ const hasSubItems = computed(() => {
 </script>
 
 <template>
-  <NuxtLink class="flex flex-row items-center justify-between w-full py-3 px-5"
+  <NuxtLink class="flex flex-row items-center justify-between w-full py-3 px-5 cursor-pointer"
     :class="[{ 'text-white': props.variant == 'light', 'text-blue-smoke': props.variant == 'dark' }, { 'text-sm': props.fontSize == 'sm', 'text-md': props.fontSize == 'md', 'text-lg': props.fontSize == 'lg' }, props.hoverClass]"
     :to="props.link" @mouseover="hovered = true" @mouseout="hovered = false">
     <div class="flex">

@@ -11,10 +11,10 @@ const onClick = () => {
 </script>
 
 <template>
-  <button class="rounded-sm py-2" :class="[{ 'w-full': props.size == 'full' }, {
-    'bg-primary text-white': props.variant == 'primary' &&
+  <button class="rounded-md py-2" :class="[{ 'w-full': props.size == 'full' }, {
+    'bg-primary hover:bg-primary-600 text-white': props.variant == 'primary' &&
       props.type == 'raised',
-    'border border-white text-white': props.variant == 'white' &&
+    'border border-white text-white hover:bg-white hover:bg-opacity-10': props.variant == 'white' &&
       props.type == 'outline',
     'border border-primary text-primary': props.variant == 'primary' &&
       props.type == 'outline',
@@ -24,7 +24,8 @@ const onClick = () => {
       !props.type,
     'text-white': props.variant == 'white' &&
       !props.type
-  }, { 'shadow-md': props.type == 'raised' }, { 'px-5': props.type }]" :disabled="props.disabled" @click="onClick">
+  }, { 'shadow-md hover:shadow-lg': props.type == 'raised' }, { 'uppercase': props.uppercase, 'px-5': props.type }]"
+    :disabled="props.disabled" @click="onClick">
     <slot></slot>
   </button>
 </template>

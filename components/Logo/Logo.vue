@@ -47,7 +47,7 @@ const labelSize = computed(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center"
+  <NuxtLink to="/" class="flex items-center justify-center"
     :class="{ 'flex-row space-x-3': props.alignment == 'horizontal', 'flex-col space-y-3': props.alignment == 'vertical' }">
     <svg :width="imageSize.width" :height="imageSize.height" viewBox="0 0 31 29" fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ const labelSize = computed(() => {
         d="M71.3791 14.1705C71.3791 13.8068 71.4855 13.5038 71.6982 13.2614C71.9185 13.0189 72.2451 12.8977 72.6782 12.8977C73.1112 12.8977 73.4378 13.0189 73.6581 13.2614C73.886 13.5038 74 13.8068 74 14.1705C74 14.5189 73.886 14.8106 73.6581 15.0455C73.4378 15.2803 73.1112 15.3977 72.6782 15.3977C72.2451 15.3977 71.9185 15.2803 71.6982 15.0455C71.4855 14.8106 71.3791 14.5189 71.3791 14.1705Z"
         :class="color" />
     </svg>
-  </div>
+  </NuxtLink>
 </template>
 
 <style scoped></style>

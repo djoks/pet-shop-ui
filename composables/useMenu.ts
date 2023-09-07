@@ -1,6 +1,6 @@
 import { ref } from "vue";
 
-export const useMenu = () => {
+export const useMenu = (menuType: string) => {
 	const menuItems = ref([]);
 
 	if (menuType === "top") {
