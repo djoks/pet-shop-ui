@@ -6,7 +6,7 @@ const props = defineProps<FooterSectionProps>();
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col justify-center">
     <div v-if="props.title" class="text-md font-bold mb-3">{{ props.title }}</div>
     <div>
       <slot></slot>
