@@ -29,7 +29,7 @@ const secondCategory = computed(() => categories.value ? (categories.value as Ca
     <Feature class="mt-10" image-src="./img/featured/treat-your-pup.jpg" caption="Treat your pup"
       action-text="Discover our dog treat selection" />
 
-    <CategoryCarousel :category="secondCategory" v-if="secondCategory" />
+    <CategoryCarousel class="mt-10" :category="secondCategory" v-if="secondCategory" />
 
     <Feature class="my-10" image-src="./img/featured/get-the-best-tips.jpg" image-position="right"
       caption="Get the best tips" action-text="Read our blog" />
