@@ -4,14 +4,14 @@ import type { ButtonProps } from "./Button.types"
 const props = defineProps<ButtonProps>();
 
 const onClick = () => {
-  if (!props.disabled) {
+  if (!props.disabled && props.onClick) {
     props.onClick();
   }
 };
 </script>
 
 <template>
-  <button class="rounded-md py-2 text-sm" :class="[{ 'w-full': props.size == 'full' }, {
+  <button :type="props.submit ? 'submit' : 'button'" class="rounded-md py-2 text-sm" :class="[{ 'w-full': props.size == 'full' }, {
     'bg-primary hover:bg-primary-600 text-white': props.variant == 'primary' &&
       props.type == 'raised',
     'border border-white text-white hover:bg-white hover:bg-opacity-10': props.variant == 'white' &&

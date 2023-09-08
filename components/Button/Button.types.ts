@@ -4,5 +4,6 @@ export interface ButtonProps {
 	size?: "sm" | "md" | "full";
 	disabled?: boolean;
 	uppercase?: boolean;
+	submit?: boolean;
 	onClick?: () => void;
 }
