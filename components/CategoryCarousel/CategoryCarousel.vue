@@ -3,7 +3,7 @@ import type { Category } from "../../types/Category";
 
 const props = defineProps<{ category: Category }>();
 
-const { data } = useFetchApi<Promotion>('https://pet-shop.buckhill.com.hr/api/v1/products', { limit: 9, category: props.category.uuid });
+const { data } = useFetchApi<Promotion>('products', { limit: 9, category: props.category.uuid });
 const { paginatedData } = usePagination<Promotion>(data);
 
 </script>

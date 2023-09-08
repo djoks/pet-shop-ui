@@ -14,5 +14,5 @@ export default defineNuxtConfig({
 	},
 	css: ["@/assets/css/main.css"],
 	modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "vue3-carousel-nuxt"],
-	plugins: ["@/plugins/directives.ts"],
+	plugins: ["@/plugins/directives.ts", "@/plugins/modal.ts"],
 });
