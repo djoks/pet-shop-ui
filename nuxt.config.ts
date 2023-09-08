@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import ellipsize from "./directives/ellipsize";
+
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	app: {
@@ -13,4 +15,5 @@ export default defineNuxtConfig({
 	},
 	css: ["@/assets/css/main.css"],
 	modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "vue3-carousel-nuxt"],
+	plugins: ["@/plugins/directives.ts"],
 });
