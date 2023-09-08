@@ -1,17 +1,15 @@
 <script lang="ts" setup>
-import { defineProps, defineEmits } from 'vue';
-import type { SearchInputProps } from "./SearchInput.types"
 
-const { modelValue } = defineProps<SearchInputProps>();
+const { modelValue } = defineProps<{ modelValue?: string }>();
 const emit = defineEmits();
 const focused = ref(false);
 
-let timeout;
+let timeout: ReturnType<typeof setTimeout>;
 
-const debounceInput = (event) => {
+const debounceInput = (event: Event) => {
   clearTimeout(timeout);
   timeout = setTimeout(() => {
-    emit('update:modelValue', event.target.value);
+    emit('update:modelValue', (event.target as HTMLInputElement).value);
   }, 300);
 };
 </script>
