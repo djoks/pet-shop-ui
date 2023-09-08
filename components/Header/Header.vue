@@ -1,7 +1,30 @@
 <script lang="ts" setup>
+import { watch, ref } from 'vue';
+import { useModalStore } from '../../stores/modal';
+import { useAuthStore } from '../../stores/auth';
+import { useFetchApi } from '../../composables/useFetchApi';
 
 const { menuItems } = useMenu("top");
+const modal = useModalStore();
+const auth = useAuthStore();
 
+// const userData = ref(null);
+
+// watch(
+//   () => auth.token,
+//   async (newToken, oldToken) => {
+//     if (newToken && newToken !== oldToken) {
+//       console.log("Token being called");
+//       const { data, error } = useFetchApi('user');
+//       if (error.value) {
+//         console.error('Failed to fetch user data:', error.value);
+//       } else {
+//         userData.value = data.value;
+//         auth.setUser(userData.value);
+//       }
+//     }
+//   }
+// );
 </script>
 
 <template>
@@ -19,7 +42,8 @@ const { menuItems } = useMenu("top");
             <span>Cart (0)</span>
           </div>
         </Button>
-        <Button variant="white" type="outline" :uppercase="true">Login</Button>
+        <Button v-if="auth.token" variant="white" type="outline" :uppercase="true">Logout</Button>
+        <Button v-else @click="modal.openModal()" variant="white" type="outline" :uppercase="true">Login</Button>
       </div>
     </div>
   </div>

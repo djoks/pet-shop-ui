@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useModalStore } from '../stores/modal';
+
+const modal = useModalStore();
+</script>
 
 <template>
   <div>
@@ -7,6 +11,9 @@
       <slot />
     </div>
     <Footer />
+    <Modal v-if="modal.isOpen">
+      <LoginForm />
+    </Modal>
   </div>
 </template>
 
