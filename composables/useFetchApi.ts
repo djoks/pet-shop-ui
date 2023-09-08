@@ -1,5 +1,5 @@
 import { ref, Ref } from "vue";
-import type { FetchState } from "../types/FetchState";
+import type { FetchState } from "../types/api/FetchState";
 import type { PaginationResponse } from "../types/api/pagination/PaginationResponse";
 
 export function useFetchApi<T>(
