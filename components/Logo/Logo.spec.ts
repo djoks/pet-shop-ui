@@ -25,6 +25,7 @@ describe("Logo.vue", () => {
 	});
 
 	// Test for SVG elements based on props
+	// Test for SVG elements based on props
 	it("renders SVG elements based on props", () => {
 		const wrapper = mount(Logo, {
 			propsData: {
@@ -32,6 +33,12 @@ describe("Logo.vue", () => {
 			},
 		});
 		const svgElements = wrapper.findAll("svg");
-		expect(svgElements.at(0).classes()).toContain("fill-white");
+		const firstSvgElement = svgElements.at(0);
+
+		if (firstSvgElement.exists()) {
+			expect(firstSvgElement.classes()).toContain("fill-white");
+		} else {
+			fail("SVG element not found");
+		}
 	});
 });
