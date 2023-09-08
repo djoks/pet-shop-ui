@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { MenuItemProps } from "./MenuItem.types"
+import type { MenuItemProps } from "./MenuItem.types";
 import { ref } from 'vue';
 
 const props = defineProps<MenuItemProps>();
@@ -7,10 +7,8 @@ const props = defineProps<MenuItemProps>();
 const hovered = ref(false);
 
 const hasSubItems = computed(() => {
-  return props.subItems?.length > 0;
+  return (props.subItems?.length ?? 0) > 0;
 });
-
-
 </script>
 
 <template>

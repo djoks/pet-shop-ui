@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { LogoProps } from "./Logo.types"
-import { computed } from "vue"
+import type { LogoProps } from "./Logo.types";
+import { computed } from "vue";
 
 const props = withDefaults(defineProps<LogoProps>(), {
   variant: "primary",

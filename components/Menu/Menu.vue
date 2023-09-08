@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { MenuProps } from "./Menu.types"
+import type { MenuProps } from "./Menu.types";
 
 const props = withDefaults(defineProps<MenuProps>(), {
   variant: "dark",

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import type { FooterSectionProps } from "./FooterSection.types"
 
-const props = defineProps<FooterSectionProps>();
+const props = defineProps<{ title?: string }>();
 
 </script>
 
