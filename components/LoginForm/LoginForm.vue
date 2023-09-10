@@ -4,7 +4,7 @@ import { useMutateApi } from '../../composables/useMutateApi';
 import { useAuthStore } from '../../stores/auth';
 import { useModalStore } from '../../stores/modal';
 
-const { execute, loading, data, error } = useMutateApi();
+const { execute, data, error } = useMutateApi();
 const auth = useAuthStore();
 const modal = useModalStore();
 const email = ref('');
@@ -12,7 +12,7 @@ const password = ref('');
 
 const login = async () => {
   await execute('user/login', { email: email.value, password: password.value });
-  console.log({ data });
+
   if (data.value?.data?.token) {
     auth.setToken(data.value.data.token);
     modal.closeModal();

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { defineProps } from 'vue';
 import type { FeatureProps } from "./Feature.types";
 
 const props = withDefaults(defineProps<FeatureProps>(), {

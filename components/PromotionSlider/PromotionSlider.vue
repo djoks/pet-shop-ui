@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Carousel, Navigation, Slide } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
-import { Promotion } from "../types/promotion/Promotion";
+import { Promotion } from "../../types/promotion/Promotion";
 
 const props = defineProps<{ promotions: Promotion[] }>();
 </script>

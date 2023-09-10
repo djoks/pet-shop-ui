@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { Category } from "../../types/Category";
+import type { Promotion } from "../../types/promotion/Promotion";
 
 const props = defineProps<{ category: Category }>();
 
@@ -13,7 +14,7 @@ const { paginatedData } = usePagination<Promotion>(data);
     <div class="text-4xl font-light text-primary capitalize">{{ props.category.title }}</div>
 
     <Carousel class="mt-10" :items-to-show="3" :wrap-around="true">
-      <Slide class="p-5" v-for="product in paginatedData" :key="slide">
+      <Slide class="p-5" v-for="product in paginatedData" :key="product.uuid">
         <ProductItem :product="product" />
       </Slide>
 

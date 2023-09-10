@@ -1,6 +1,6 @@
+import { describe, it, vi, expect } from "vitest";
 import { mount } from "@vue/test-utils";
 import Button from "./Button.vue";
-
 describe("Button.vue", () => {
 	it("renders button content via slot", () => {
 		const wrapper = mount(Button, {
@@ -12,7 +12,7 @@ describe("Button.vue", () => {
 	});
 
 	it("handles click when not disabled", async () => {
-		const mockClick = jest.fn();
+		const mockClick = vi.fn();
 		const wrapper = mount(Button, {
 			props: {
 				onClick: mockClick,
@@ -24,7 +24,7 @@ describe("Button.vue", () => {
 	});
 
 	it("does not handle click when disabled", async () => {
-		const mockClick = jest.fn();
+		const mockClick = vi.fn();
 		const wrapper = mount(Button, {
 			props: {
 				disabled: true,
@@ -45,6 +45,4 @@ describe("Button.vue", () => {
 
 		expect(wrapper.attributes("type")).toBe("submit");
 	});
-
-	// Add more tests to cover other props and their combinations
 });
