@@ -13,6 +13,9 @@ const props = defineProps<{ product: Product }>();
       </div>
     </div>
     <div class="text-start font-sm font-light capitalize">{{ props.product.category.title }}</div>
+    <div class="text-start">
+      {{ props.product.price }}
+    </div>
   </div>
 </template>
 
